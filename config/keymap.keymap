@@ -232,11 +232,11 @@
         layer_6 {
             display-name = "JIS Symbol";
             bindings = <
-&trans  &trans  &trans             &trans  &trans  &trans                                  &trans                &trans                  &trans                    &trans          &trans          &trans
-&trans  &trans  &kp LEFT_BRACKET   &trans  &trans  &trans                                  &kp EQUAL             &kp LS(N6)              &kp LS(SINGLE_QUOTE)      &kp LS(N8)      &kp LS(N9)      &trans
-&trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans                  &kp LS(RIGHT_BRACKET) &trans                  &kp LS(MINUS)             &kp LS(NON_US_HASH) &kp SINGLE_QUOTE &trans
-&trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans                  &kp LS(INTERNATIONAL_1) &kp LS(SEMICOLON)      &kp RIGHT_BRACKET         &kp NON_US_HASH  &kp INTERNATIONAL_1 &trans
-&trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans                  &trans                &trans                  &trans                    &trans          &trans          &trans
+&trans  &trans            &trans             &trans      &trans      &trans                                  &trans                       &trans              &trans                  &trans               &trans            &trans
+&trans  &kp LS(NUMBER_1)  &kp LEFT_BRACKET   &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                              &kp EQUAL                    &kp LS(N6)          &kp LS(SINGLE_QUOTE)  &kp LS(N8)          &kp LS(N9)      &trans
+&trans  &kp N1            &kp N2             &kp N3      &kp N4      &kp N5      &trans  &trans              &kp LS(RIGHT_BRACKET)        &kp MINUS           &kp LS(MINUS)         &kp LS(NON_US_HASH) &kp SINGLE_QUOTE &trans
+&trans  &kp N6            &kp N7             &kp N8      &kp N9      &kp N0      &trans  &trans              &kp LS(INTERNATIONAL_1)      &kp LS(SEMICOLON)   &kp RIGHT_BRACKET    &kp NON_US_HASH     &kp INTERNATIONAL_1 &trans
+&trans  &trans            &trans             &trans      &trans      &trans      &trans  &trans              &kp TAB                       &kp DEL              &trans                  &trans               &trans            &trans
             >;
         };
 
@@ -252,4 +252,3 @@
         };
     };
 };
-

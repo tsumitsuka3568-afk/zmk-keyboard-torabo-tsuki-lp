@@ -137,6 +137,13 @@
             wait-ms = <10>;
             bindings = <&bt BT_SEL 4>, <&out OUT_BLE>, <&to L_BASE>;
         };
+
+        jis_yen: jis_yen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            display-name = "JIS Yen";
+            bindings = <&kp INT_YEN>;
+        };
     };
 
     conditional_layers {
@@ -163,7 +170,7 @@
 &kp TAB    &kp Q      &kp W     &kp E     &kp R     &kp T                                                          &kp Y        &kp U     &kp I      &kp O     &kp P                 &kp BSPC
 &kp CAPS   &kp A      &kp S     &kp D     &kp F     &kp G        &mkp LCLK                  &mkp RCLK              &kp H        &kp J     &kp K      &kp L     &kp SEMI              &kp SQT
 &kp LSHFT  &kp Z      &kp X     &kp C     &kp V     &kp B        &kp SPACE                  &kp RET                &kp N        &kp M     &kp COMMA  &kp DOT   &mt RIGHT_SHIFT FSLH  &kp RSHFT
-&kp LCTRL  &kp LCTRL  &kp LGUI  &kp LALT  &kp BSPC  &lt 2 SPACE  &mt LEFT_SHIFT LANGUAGE_1  &mt RSHIFT LANGUAGE_2  &lt 3 ENTER  &kp BSPC  &kp RALT   &kp RGUI  &kp RCTRL             &kp RCTRL
+&kp LCTRL  &kp LCTRL  &kp LGUI  &kp LALT  &lt L_MOUSE BSPC  &lt 2 SPACE  &mt LEFT_SHIFT LANGUAGE_1  &mt RSHIFT LANGUAGE_2  &lt 3 ENTER  &kp BSPC  &kp RALT   &kp RGUI  &kp RCTRL             &kp RCTRL
             >;
         };
 

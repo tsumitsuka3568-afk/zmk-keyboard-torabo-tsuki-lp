@@ -57,5 +57,20 @@
 &trans  &trans   &trans   &trans        &kp DELETE    &kp TAB     &trans  &trans  &trans            &trans     &trans         &trans     &trans      &trans
             >;
         };
+        extra_4 {
+            status = "reserved";
+        };
+
+        extra_5 {
+            status = "reserved";
+        };
+
+        extra_6 {
+            status = "reserved";
+        };
+
+        extra_7 {
+            status = "reserved";
+        };
     };
 };

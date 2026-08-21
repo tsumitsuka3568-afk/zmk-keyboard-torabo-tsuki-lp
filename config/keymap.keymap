@@ -23,6 +23,12 @@
             key-positions = <28 29>;
             layers = <2>;
         };
+
+        studio_usb_recovery {
+            bindings = <&out OUT_USB>;
+            key-positions = <52 53>;
+            timeout-ms = <300>;
+        };
     };
 
     behaviors {

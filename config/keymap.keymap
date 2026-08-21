@@ -57,6 +57,7 @@
 &trans  &trans   &trans   &trans        &kp DELETE    &kp TAB     &trans  &trans  &trans            &trans     &trans         &trans     &trans      &trans
             >;
         };
+        
         extra_4 {
             status = "reserved";
         };

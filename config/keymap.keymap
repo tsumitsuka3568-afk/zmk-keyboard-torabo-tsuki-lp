@@ -1,18 +1,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/modifiers.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
-
-#define L_BASE       0
-#define L_MOUSE      1
-#define L_SYMBOL     2
-#define L_FUNC       3
-#define L_DEVICE     4
-#define L_JIS_BASE   5
-#define L_JIS_SYMBOL 6
-#define L_JIS_FUNC   7
 
 / {
     combos {
@@ -23,141 +13,12 @@
             key-positions = <28 29>;
             layers = <2>;
         };
-
-        studio_usb_recovery {
-            bindings = <&out OUT_USB>;
-            key-positions = <52 53>;
-            timeout-ms = <300>;
-        };
-    };
-
-    behaviors {
-        jis_n2_at: jis_n2_at {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            display-name = "JIS 2 / At";
-            bindings = <&kp N2>, <&kp LEFT_BRACKET>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
-        jis_n6_caret: jis_n6_caret {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            display-name = "JIS 6 / Caret";
-            bindings = <&kp N6>, <&kp EQUAL>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
-        jis_n7_amp: jis_n7_amp {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            display-name = "JIS 7 / Ampersand";
-            bindings = <&kp N7>, <&kp LS(N6)>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
-        jis_n8_asterisk: jis_n8_asterisk {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            display-name = "JIS 8 / Asterisk";
-            bindings = <&kp N8>, <&kp LS(SINGLE_QUOTE)>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
-        jis_n9_lparen: jis_n9_lparen {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            display-name = "JIS 9 / Left Paren";
-            bindings = <&kp N9>, <&kp LS(N8)>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
-        jis_n0_rparen: jis_n0_rparen {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            display-name = "JIS 0 / Right Paren";
-            bindings = <&kp N0>, <&kp LS(N9)>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
-        jis_semi_colon: jis_semi_colon {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            display-name = "JIS Semicolon / Colon";
-            bindings = <&kp SEMI>, <&kp SINGLE_QUOTE>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-
-        jis_quote_dquote: jis_quote_dquote {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            display-name = "JIS Quote / DQuote";
-            bindings = <&kp LS(N7)>, <&kp LS(N2)>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
-        };
-    };
-
-    macros {
-        home_bt0_us: home_bt0_us {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            display-name = "HOME BT0 US";
-            wait-ms = <10>;
-            bindings = <&bt BT_SEL 0>, <&out OUT_BLE>, <&to L_BASE>;
-        };
-
-        work1_bt1_jis: work1_bt1_jis {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            display-name = "WORK1 BT1 JIS";
-            wait-ms = <10>;
-            bindings = <&bt BT_SEL 1>, <&out OUT_BLE>, <&to L_JIS_BASE>;
-        };
-
-        work2_bt2_jis: work2_bt2_jis {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            display-name = "WORK2 BT2 JIS";
-            wait-ms = <10>;
-            bindings = <&bt BT_SEL 2>, <&out OUT_BLE>, <&to L_JIS_BASE>;
-        };
-
-        work3_bt3_jis: work3_bt3_jis {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            display-name = "WORK3 BT3 JIS";
-            wait-ms = <10>;
-            bindings = <&bt BT_SEL 3>, <&out OUT_BLE>, <&to L_JIS_BASE>;
-        };
-
-        ipad_bt4_us: ipad_bt4_us {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            display-name = "IPAD BT4 US";
-            wait-ms = <10>;
-            bindings = <&bt BT_SEL 4>, <&out OUT_BLE>, <&to L_BASE>;
-        };
-    };
-
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        jis_symbol {
-            if-layers = <L_SYMBOL L_JIS_BASE>;
-            then-layer = <L_JIS_SYMBOL>;
-        };
-
-        jis_func {
-            if-layers = <L_FUNC L_JIS_BASE>;
-            then-layer = <L_JIS_FUNC>;
-        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
         layer_0 {
-            display-name = "Base";
             bindings = <
 &kp ESC    &kp N1     &kp N2    &kp N3    &kp N4    &kp N5                                                         &kp N6       &kp N7    &kp N8     &kp N9    &kp N0                &kp BSPC
 &kp TAB    &kp Q      &kp W     &kp E     &kp R     &kp T                                                          &kp Y        &kp U     &kp I      &kp O     &kp P                 &kp BSPC
@@ -168,7 +29,6 @@
         };
 
         layer_1 {
-            display-name = "Mouse";
             bindings = <
 &trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
@@ -179,7 +39,6 @@
         };
 
         layer_2 {
-            display-name = "Symbol";
             bindings = <
 &trans  &trans            &trans            &trans      &trans      &trans                      &trans          &trans         &trans            &trans             &trans         &trans
 &trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                  &kp LS(N6)      &kp LS(N7)     &kp LS(N8)        &kp LS(N9)         &kp LS(N0)     &trans
@@ -190,59 +49,13 @@
         };
 
         layer_3 {
-            display-name = "Function";
             bindings = <
-&trans         &trans   &trans   &trans        &trans        &trans                      &trans            &trans     &trans         &trans     &trans      &trans
-&trans         &kp F1   &kp F2   &kp F3        &kp F4        &kp F5                      &kp HOME          &kp PG_UP  &kp PAGE_DOWN  &kp END    &kp ESCAPE  &trans
-&trans         &kp F6   &kp F7   &kp F8        &kp F9        &kp F10     &trans  &trans  &kp LEFT          &kp DOWN   &kp UP_ARROW   &kp RIGHT  &kp TAB     &trans
-&trans         &kp F11  &kp F12  &out OUT_USB  &out OUT_BLE  &bt BT_NXT  &trans  &trans  &kp SINGLE_QUOTE  &kp DQT    &kp GRAVE      &kp TILDE  &kp PIPE    &trans
-&to L_DEVICE   &trans   &trans   &trans        &kp DELETE    &kp TAB     &trans  &trans  &trans            &trans     &trans         &trans     &trans      &trans
-            >;
-        };
-
-        layer_4 {
-            display-name = "Device";
-            bindings = <
-&trans  &trans        &trans         &trans         &trans         &trans                &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &home_bt0_us  &work1_bt1_jis &work2_bt2_jis &work3_bt3_jis &ipad_bt4_us          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans         &trans         &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans         &trans         &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans         &trans         &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        layer_5 {
-            display-name = "JIS Base";
-            bindings = <
-&trans  &trans  &jis_n2_at  &trans  &trans  &trans                                    &jis_n6_caret  &jis_n7_amp  &jis_n8_asterisk  &jis_n9_lparen  &jis_n0_rparen  &trans
-&trans  &trans  &trans      &trans  &trans  &trans                                    &trans         &trans       &trans             &trans           &trans           &trans
-&trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans                    &trans         &trans       &trans             &trans           &jis_semi_colon  &jis_quote_dquote
-&trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans                    &trans         &trans       &trans             &trans           &trans           &trans
-&trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans                    &trans         &trans       &trans             &trans           &trans           &trans
-            >;
-        };
-
-        layer_6 {
-            display-name = "JIS Symbol";
-            bindings = <
-&trans  &trans  &trans             &trans  &trans  &trans                                  &trans                &trans                  &trans                    &trans          &trans          &trans
-&trans  &trans  &kp LEFT_BRACKET   &trans  &trans  &trans                                  &kp EQUAL             &kp LS(N6)              &kp LS(SINGLE_QUOTE)      &kp LS(N8)      &kp LS(N9)      &trans
-&trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans                  &kp LS(RIGHT_BRACKET) &trans                  &kp LS(MINUS)             &kp LS(NON_US_HASH) &kp SINGLE_QUOTE &trans
-&trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans                  &kp LS(INTERNATIONAL_1) &kp LS(SEMICOLON)      &kp RIGHT_BRACKET         &kp NON_US_HASH  &kp INTERNATIONAL_1 &trans
-&trans  &trans  &trans             &trans  &trans  &trans  &trans  &trans                  &trans                &trans                  &trans                    &trans          &trans          &trans
-            >;
-        };
-
-        layer_7 {
-            display-name = "JIS Function";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                            &trans  &trans  &trans                 &trans         &trans                  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                            &trans  &trans  &trans                 &trans         &trans                  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans                 &trans         &kp TAB                 &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &kp LS(N7) &kp LS(N2) &kp LS(LEFT_BRACKET) &kp LS(EQUAL) &kp LS(INTERNATIONAL_3) &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans                 &trans         &trans                  &trans
+&trans  &trans   &trans   &trans        &trans        &trans                      &trans            &trans     &trans         &trans     &trans      &trans
+&trans  &kp F1   &kp F2   &kp F3        &kp F4        &kp F5                      &kp HOME          &kp PG_UP  &kp PAGE_DOWN  &kp END    &kp ESCAPE  &trans
+&trans  &kp F6   &kp F7   &kp F8        &kp F9        &kp F10     &trans  &trans  &kp LEFT          &kp DOWN   &kp UP_ARROW   &kp RIGHT  &kp TAB     &trans
+&trans  &kp F11  &kp F12  &out OUT_USB  &out OUT_BLE  &bt BT_NXT  &trans  &trans  &kp SINGLE_QUOTE  &kp DQT    &kp GRAVE      &kp TILDE  &kp PIPE    &trans
+&trans  &trans   &trans   &trans        &kp DELETE    &kp TAB     &trans  &trans  &trans            &trans     &trans         &trans     &trans      &trans
             >;
         };
     };
 };
-

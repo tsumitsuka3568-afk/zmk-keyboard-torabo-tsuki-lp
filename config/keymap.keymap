@@ -89,9 +89,9 @@
             display-name = "Win JIS Symbols";
             bindings = <
 &none  &none        &none             &none       &none       &none                                      &none                &none                    &none                  &none          &none          &none
-&none  &kp LS(N1)   &kp LEFT_BRACKET  &kp LS(N3) &kp LS(N4) &kp LS(N5)                                 &kp EQUAL           &kp LS(N6)              &kp LS(SINGLE_QUOTE) &kp LS(N8)     &kp LS(N9)     &none
-&none  &kp N1       &kp N2            &kp N3     &kp N4     &kp N5          &none         &none          &kp LS(RIGHT_BRACKET) &kp MINUS              &kp LS(MINUS)         &kp PIPE           &kp SINGLE_QUOTE &none
-&none  &kp N6       &kp N7            &kp N8     &kp N9     &kp N0          &trans        &trans         &kp LS(INTERNATIONAL_1) &kp LS(SEMICOLON)  &kp RIGHT_BRACKET     &kp BACKSLASH      &kp INTERNATIONAL_1 &none
+&none  &kp EXCLAMATION &kp LEFT_BRACKET &kp HASH   &kp DOLLAR &kp PERCENT                                &kp EQUAL           &kp CARET               &kp DOUBLE_QUOTES     &kp ASTERISK   &kp LEFT_PARENTHESIS &none
+&none  &kp N1          &kp N2           &kp N3     &kp N4     &kp N5          &none         &none          &kp RIGHT_BRACE      &kp MINUS               &kp UNDER             &kp PIPE       &kp SINGLE_QUOTE     &none
+&none  &kp N6          &kp N7           &kp N8     &kp N9     &kp N0          &trans        &trans         &kp LS(INTERNATIONAL_1) &kp COLON            &kp RIGHT_BRACKET     &kp BACKSLASH  &kp INTERNATIONAL_1  &none
 &none  &trans       &trans            &trans     &trans     &trans          &trans        &trans         &kp TAB             &none                    &none                  &trans          &trans          &none
             >;
         };
@@ -102,7 +102,7 @@
 &none  &none    &none    &none    &none       &none                                &none       &none       &none                 &none          &none                    &none
 &none  &kp F1   &kp F2   &kp F3   &kp F4      &kp F5                               &kp HOME    &kp PG_UP  &kp PAGE_DOWN         &kp END        &kp ESCAPE              &none
 &none  &kp F6   &kp F7   &kp F8   &kp F9      &kp F10      &none      &none        &kp LEFT    &kp DOWN   &kp UP_ARROW           &kp RIGHT      &kp TAB                 &none
-&none  &kp F11  &kp F12  &trans   &trans      &jis_yen     &trans     &trans       &kp LS(N7)  &kp LS(N2) &kp LS(LEFT_BRACKET)  &kp LS(EQUAL) &kp LS(INTERNATIONAL_3) &none
+&none  &kp F11  &kp F12  &trans   &trans      &jis_yen     &trans     &trans       &kp AMPERSAND  &kp AT  &kp LEFT_BRACE  &kp PLUS  &kp LS(INTERNATIONAL_3) &none
 &none  &to L_DEVICE &trans &trans  &kp DELETE  &kp TAB      &trans     &trans       &trans      &none       &none                 &trans         &trans                    &none
             >;
         };

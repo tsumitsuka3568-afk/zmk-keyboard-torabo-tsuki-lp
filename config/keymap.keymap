@@ -56,33 +56,33 @@
         win_us_symbols {
             display-name = "Win US Symbols";
             bindings = <
-&none  &none             &none             &none       &none       &none                              &none           &none          &none             &none              &none          &none
-&none  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                         &kp LS(N6)      &kp LS(N7)     &kp LS(N8)        &kp LS(N9)         &kp LS(N0)     &none
-&none  &kp N1            &kp N2            &kp N3      &kp N4      &kp N5      &none   &none          &kp LEFT_BRACE  &kp MINUS      &kp EQUAL         &kp RIGHT_BRACE    &kp COLON      &none
-&none  &kp N6            &kp N7            &kp N8      &kp N9      &kp N0      &trans  &kp SEMICOLON  &kp LS(MINUS)   &kp LS(EQUAL)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &none
-&none  &trans            &trans            &trans      &trans      &trans      &trans  &trans         &kp TAB         &none          &none             &trans             &trans         &none
+&none  &none             &none             &none       &none       &none                       &none             &none              &none           &none              &none          &none
+&none  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                  &kp LS(N6)        &kp LS(N7)         &kp LS(N8)      &kp LS(N9)         &kp LS(N0)     &none
+&none  &kp N1            &kp N2            &kp N3      &kp N4      &kp N5      &none   &none   &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp BACKSLASH   &kp PIPE           &kp COLON      &none
+&none  &kp N6            &kp N7            &kp N8      &kp N9      &kp N0      &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp APOSTROPHE  &kp DOUBLE_QUOTES  &kp SEMICOLON  &none
+&none  &kp LESS_THAN     &kp GREATER_THAN  &trans      &trans      &trans      &trans  &trans  &trans            &none              &none           &kp SLASH          &kp INT_YEN    &none
             >;
         };
 
         win_us_fn {
             display-name = "Win US Fn";
             bindings = <
-&none  &none         &none    &none   &none       &none                    &none             &none      &none          &none      &none       &none
-&none  &kp F1        &kp F2   &kp F3  &kp F4      &kp F5                   &kp HOME          &kp PG_UP  &kp PAGE_DOWN  &kp END    &kp ESCAPE  &none
-&none  &kp F6        &kp F7   &kp F8  &kp F9      &kp F10  &none   &none   &kp LEFT          &kp DOWN   &kp UP_ARROW   &kp RIGHT  &kp TAB     &none
-&none  &kp F11       &kp F12  &trans  &trans      &trans   &trans  &trans  &kp SINGLE_QUOTE  &kp DQT    &kp GRAVE      &kp TILDE  &kp PIPE    &none
-&none  &to L_DEVICE  &trans   &trans  &kp DELETE  &kp TAB  &trans  &trans  &trans            &none      &none          &trans     &trans      &none
+&none  &none             &none         &none         &none           &none                    &none             &none      &none          &none      &none       &none
+&none  &kp F1            &kp F2        &kp F3        &kp F4          &kp F5                   &kp HOME          &kp PG_UP  &kp PAGE_DOWN  &kp END    &kp ESCAPE  &none
+&none  &kp F6            &kp F7        &kp F8        &kp F9          &kp F10  &none   &none   &kp LEFT          &kp DOWN   &kp UP_ARROW   &kp RIGHT  &kp TAB     &none
+&none  &kp F11           &kp F12       &trans        &trans          &trans   &trans  &trans  &kp SINGLE_QUOTE  &kp DQT    &kp GRAVE      &kp TILDE  &kp PIPE    &none
+&none  &kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp TAB  &trans  &trans  &trans            &none      &none          &trans     &trans      &none
             >;
         };
 
         win_jis_base {
             display-name = "Win JIS Base";
             bindings = <
-&none  &none             &none     &none     &none            &none                                                            &none          &none  &none      &none     &none                 &none
-&none  &kp Q             &kp W     &kp E     &kp R            &kp T                                                            &kp Y          &kp U  &kp I      &kp O     &kp P                 &none
-&none  &kp A             &kp S     &kp D     &kp F            &kp G                         &none                 &none        &kp H          &kp J  &kp K      &kp L     &kp MINUS             &none
-&none  &mt LEFT_SHIFT Z  &kp X     &kp C     &kp V            &kp B                         &mt LEFT_SHIFT LANG2  &kp LANG1    &kp N          &kp M  &kp COMMA  &kp DOT   &mt RIGHT_SHIFT FSLH  &none
-&none  &kp LCTRL         &kp LGUI  &kp LALT  &lt L_MOUSE TAB  &lt L_WIN_JIS_SYMBOLS ESCAPE  &lt 5 SPACE           &lt 9 ENTER  &kp BACKSPACE  &none  &none      &kp RGUI  &kp RCTRL             &none
+&none  &none             &none     &none     &none            &none                                                                           &none          &none  &none      &none     &none                 &none
+&none  &kp Q             &kp W     &kp E     &kp R            &kp T                                                                           &kp Y          &kp U  &kp I      &kp O     &kp P                 &none
+&none  &kp A             &kp S     &kp D     &kp F            &kp G                         &none                        &none                &kp H          &kp J  &kp K      &kp L     &kp MINUS             &none
+&none  &mt LEFT_SHIFT Z  &kp X     &kp C     &kp V            &kp B                         &mt LEFT_SHIFT INT_MUHENKAN  &kp INTERNATIONAL_4  &kp N          &kp M  &kp COMMA  &kp DOT   &mt RIGHT_SHIFT FSLH  &none
+&none  &kp LCTRL         &kp LGUI  &kp LALT  &lt L_MOUSE TAB  &lt L_WIN_JIS_SYMBOLS ESCAPE  &lt 5 SPACE                  &lt 9 ENTER          &kp BACKSPACE  &none  &none      &kp RGUI  &kp RCTRL             &none
             >;
         };
 
@@ -93,18 +93,18 @@
 &none  &kp EXCLAMATION  &kp LEFT_BRACKET  &kp HASH  &kp DOLLAR  &kp PERCENT                         &kp EQUAL                &kp CARET  &kp DOUBLE_QUOTES  &kp ASTERISK   &kp LEFT_PARENTHESIS  &none
 &none  &kp N1           &kp N2            &kp N3    &kp N4      &kp N5       &none   &none          &kp RIGHT_BRACE          &kp MINUS  &kp UNDER          &kp PIPE       &kp SINGLE_QUOTE      &none
 &none  &kp N6           &kp N7            &kp N8    &kp N9      &kp N0       &trans  &kp SEMICOLON  &kp LS(INTERNATIONAL_1)  &kp COLON  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp INTERNATIONAL_1   &none
-&none  &trans           &trans            &trans    &trans      &trans       &trans  &trans         &kp TAB                  &none      &none              &trans         &trans                &none
+&none  &trans           &trans            &trans    &trans      &trans       &trans  &trans         &kp TAB                  &none      &none              &trans         &kp INT_YEN           &none
             >;
         };
 
         win_jis_fn {
             display-name = "Win JIS Fn";
             bindings = <
-&none  &none         &none    &none   &none       &none                     &none          &none      &none           &none      &none                    &none
-&none  &kp F1        &kp F2   &kp F3  &kp F4      &kp F5                    &kp HOME       &kp PG_UP  &kp PAGE_DOWN   &kp END    &kp ESCAPE               &none
-&none  &kp F6        &kp F7   &kp F8  &kp F9      &kp F10   &none   &none   &kp LEFT       &kp DOWN   &kp UP_ARROW    &kp RIGHT  &kp TAB                  &none
-&none  &kp F11       &kp F12  &trans  &trans      &jis_yen  &trans  &trans  &kp AMPERSAND  &kp AT     &kp LEFT_BRACE  &kp PLUS   &kp LS(INTERNATIONAL_3)  &none
-&none  &to L_DEVICE  &trans   &trans  &kp DELETE  &kp TAB   &trans  &trans  &trans         &none      &none           &trans     &trans                   &none
+&none  &none             &none         &none         &none           &none                     &none          &none      &none           &none      &none                    &none
+&none  &kp F1            &kp F2        &kp F3        &kp F4          &kp F5                    &kp HOME       &kp PG_UP  &kp PAGE_DOWN   &kp END    &kp ESCAPE               &none
+&none  &kp F6            &kp F7        &kp F8        &kp F9          &kp F10   &none   &none   &kp LEFT       &kp DOWN   &kp UP_ARROW    &kp RIGHT  &kp TAB                  &none
+&none  &kp F11           &kp F12       &trans        &trans          &jis_yen  &trans  &trans  &kp AMPERSAND  &kp AT     &kp LEFT_BRACE  &kp PLUS   &kp LS(INTERNATIONAL_3)  &none
+&none  &kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp TAB   &trans  &trans  &trans         &none      &none           &trans     &trans                   &none
             >;
         };
 
